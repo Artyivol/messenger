@@ -1,8 +1,9 @@
-import React from 'react';
-import ReactDom from 'react-dom'
+import React from "react"
+import ReactDOM from "react-dom"
+import MessageField from './components/MessageField.js'
+import styles from '../src/index.css'
 
-const Example = () => {
-    return (<div><h1>Hello React</h1></div>);
-};
-
-ReactDom.render(<Example />, document.getElementById("root"))
+ReactDOM.render(
+    <MessageField />,
+    document.getElementById("root"),
+)
