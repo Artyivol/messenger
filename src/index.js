@@ -1,9 +1,24 @@
+import { ThemeProvider, createMuiTheme } from "@material-ui/core"
 import React from "react"
 import ReactDOM from "react-dom"
-import MessageField from './components/MessageField.js'
-import styles from '../src/index.css'
+import { MessageField, ChatList } from "./components"
+
+const App = () => {
+  // @TODO сделать Layout
+  return (
+    <div style={{ display: "flex" }}>
+      <ChatList />
+      <hr />
+      <MessageField />
+    </div>
+  )
+}
+
+const theme = createMuiTheme({})
 
 ReactDOM.render(
-    <MessageField />,
-    document.getElementById("root"),
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>,
+  document.getElementById("root"),
 )
